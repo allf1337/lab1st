@@ -8,8 +8,8 @@ int main()
     cout<<"Число ";
     cin >> a;
     b=a*a; //2
-    c=b*b; //4-я
-    d=c*c; //8-я
+    c=b*b; //4
+    d=c*c; //8
     c=d*c; //12
     a=a*c; //13
     cout << a;
