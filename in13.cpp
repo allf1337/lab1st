@@ -10,7 +10,7 @@ int main()
     b=a*a; //2
     c=b*b; //4-я
     d=c*c; //8-я
-    c=d*b; //12
+    c=d*c; //12
     a=a*c; //13
     cout << a;
     return 0;
