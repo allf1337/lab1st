@@ -19,7 +19,6 @@ int main()
 			cout << "Некорректное значение r";
 				return 0; }
 	S = M_PI *(pow(R,2) - pow(r,2));
-	
 	std::cout << "Площадь кольца равна: " << S << endl;
 	
 	return 0;
