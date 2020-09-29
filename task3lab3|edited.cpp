@@ -7,10 +7,10 @@ using namespace std;
 int main()
 {setlocale(LC_ALL, "Russian");
 double z, x, y, min_1, min_2, max_1, max_2;
-	cout<<"Введите x"<<endl;
-	cin>>x;
-	cout<<"Введите y"<<endl;
-	cin>>y;
+	std::cout<<"Введите x"<<endl;
+	std::cin>>x;
+	std::cout<<"Введите y"<<endl;
+	std::cin>>y;
 		if (x<5)
 			min_1=x;
 		else 
@@ -27,7 +27,7 @@ double z, x, y, min_1, min_2, max_1, max_2;
 			min_2=M_E;
 		else 
 			min_2=fabs(y-x);
-	cout << max_2/min_2<<endl;
+	std::cout << max_2/min_2<<endl;
 return 0;
 }
 
