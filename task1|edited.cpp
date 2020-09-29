@@ -20,7 +20,7 @@ int main()
 				return 0; }
 	S = M_PI *(pow(R,2) - pow(r,2));
 	
-	cout << "Площадь кольца равна: " << S << endl;
+	std::cout << "Площадь кольца равна: " << S << endl;
 	
 	return 0;
 }
