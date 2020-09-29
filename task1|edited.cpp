@@ -10,12 +10,12 @@ int main()
 	int R, r, S;
 	std::cout << "Введите внешний радиус кольца R:";
 	std::cin >> R;
-	if (R < 0) {
+	if (R < 0 || (std::cin.fail())) {
 	cout << "Некорректное значение R";
 	return 0; }
 	std::cout << "Введите внутренний радиус кольца r:";
 	std::cin >> r;
-	if (r < 0) {
+	if (r < 0 || (std::cin.fail())) {
 	cout << "Некорректное значение r";
 	return 0; }
 	S = M_PI *(pow(R,2) - pow(r,2));
