@@ -4,7 +4,6 @@ I
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -14,7 +13,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double proizv = 1, x, i, sum = 0;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -27,7 +26,8 @@ int main()
 		sum = sum + i;
 		proizv = proizv * i;
 	}
-	cout << "Summa ravna: " << sum << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -38,7 +38,6 @@ int main()
 
 
 #include <iostream>
-#include <windows.h>
 #include <locale.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -50,7 +49,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double proizv = 1, x, i, sum = 0;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -64,8 +63,8 @@ int main()
 		sum = sum + i * 2;
 		proizv = proizv * 2 * i;
 	}
-	cout << "Proizvedenie ravno:" << proizv << endl;
-	cout << "Summa ravna: " << sum << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -76,7 +75,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -86,7 +84,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double proizv=1, number, x, i, sum = 0;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -99,8 +97,8 @@ int main()
 		sum = sum + (2 * i - 1);
 		proizv = proizv * (2 * i - 1);
 	}
-	cout << "Proizvedenie ravno: " << proizv << endl;
-	cout << "Summa ravna: " << sum << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -110,7 +108,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -120,7 +117,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double number, proizv = 1, x, i, sum = 0;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -133,8 +130,8 @@ int main()
 		sum = sum + pow(2, i);
 		proizv = proizv * pow(2, i);
 	}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizv :" << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -146,7 +143,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -156,7 +152,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double number, x, i, sum = 0, proizv = 1;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -170,8 +166,8 @@ int main()
 		sum = sum + number;
 		proizv = proizv * number;
 	}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizv:" << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -183,7 +179,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -193,7 +188,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double number, x, i, sum = 0, proizv = 1;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -207,8 +202,8 @@ int main()
 		sum = sum + number;
 		proizv = proizv * number;
 	}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizv:" << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -220,7 +215,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -230,7 +224,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double number, x, i, sum = 0, proizv = 1;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -244,8 +238,8 @@ int main()
 		sum = sum + number;
 		proizv = proizv * number;
 	}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizvedenie ravno: " << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -257,7 +251,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -267,7 +260,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	double number, x, i, sum = 0, proizv = 1;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -281,8 +274,8 @@ int main()
 		sum = sum + number;
 		proizv = proizv * number;
 	}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizvedenie ravno: " << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -293,7 +286,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -304,7 +296,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	int i;
 	double number, x, sum = 0, proizv = 1,odin;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -322,8 +314,8 @@ int main()
 		sum = sum + number;
 		proizv = proizv * number;
 	}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizvedenie ravno: " << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	system("pause");
 	return(0);
 }
@@ -334,7 +326,6 @@ int main()
 
 #include <iostream>
 #include <locale.h>
-#include <windows.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -345,7 +336,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	int i, F=1, x;
 	double sum = 0, proizv = 1,a;
-	cout << "kolvo elov" << endl;
+	cout << "Кол-во элементов: " << endl;
 	cin >> x;
 	//Ошибки
 	if (x < 0) {
@@ -362,8 +353,8 @@ int main()
 			proizv = proizv * a;
 
 		}
-	cout << "Summa ravna: " << sum << endl;
-	cout << "Proizvedenie ravno: " << proizv << endl;
+	cout << "Сумма: " << sum << endl;
+	cout << "Произведение: " << proizv << endl;
 	
 	system("pause");
 	return(0);
