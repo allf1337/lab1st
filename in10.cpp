@@ -366,17 +366,27 @@ II
 
 ----------------------------------------------------------------------------------------------------
 
-#5
+#3
 
 
 #include <iostream>
-#include <windows.h>
 #include <locale.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+
+
 using namespace std;
 
+long double fact(int i)
+{
+    if(i < 0) 
+        return 0;
+    if (i == 0)
+        return 1;
+    else
+        return i * fact(i - 1);
+}
 int main() {
 	setlocale(LC_ALL, "Russian");
 	//Ввод аргументов
@@ -398,15 +408,16 @@ int main() {
 		system("pause");
 		return(0);
 	}
-	//Найдём левую часть ln(1+x)
+	//Найдём левую часть
 
-	left = log(1 + x);
+	left = cos(x);
 
 	//Найдём правую часть
 
+	
 	for (i = 1; i <= c; i++) {
 
-		right = pow(-1, (i + 1)) * pow(x, i) / i;
+		right = pow(-1,i) * pow(x, 2*i) / fact(2*i);
 
 		sum = sum + right;
 
@@ -426,6 +437,7 @@ int main() {
 	return(0);
 
 }
+
 
 -------------------------------------------------------------------------------------
 
