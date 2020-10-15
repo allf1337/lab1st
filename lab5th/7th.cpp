@@ -27,7 +27,7 @@ cout <<"Введите b: ";
 		x_start = x_end;
 		x_end = k;
 	}
-cout << "X |    Y1   |    Y2   |    Y3   |" << endl;
+cout << "   X |    Y1   |    Y2   |    Y3   |" << endl;
 cout << "---------------------------------" << endl;
 while (x_start <= x_end)
 {
@@ -40,14 +40,14 @@ while (x_start <= x_end)
 	if (x_start <= 2)
 		y3 = sqrt(1-cos(3.14*x_start)/2);
 	else y3 = b*(pow(3,(x_start - 2)));
-//cout.width(7); cout.precision(4);
+cout.width(4); cout.precision(4);
 cout << x_start << " | ";
 cout.width(7); cout.precision(4);
 cout<< y1 << " | ";
 cout.width(7); cout.precision(4);
 cout << y2 << " | ";
 cout.width(7); cout.precision(4);
-cout << y3 << " | "<<endl;
+cout << y3 << " | "<< endl;
 	x_start = x_start + x_d;
 }
 cin.get();
