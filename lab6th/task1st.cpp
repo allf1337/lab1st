@@ -11,7 +11,7 @@ using namespace std;
 int main() {
   int const n=10;
   double S[n], proizv=1;
-  cout << "ddsds" << endl;
+  cout << "Введите элементы массива: " << endl;
   for (int i=0; i<n; i++)
   {
     cin>>S[i];
@@ -20,9 +20,9 @@ int main() {
   {
     if (i%2==0)
     {
-      //proizv=S[i]*proizv;
-      proizv=S[i]*proizv*proizv;
+      proizv*=S[i];
     }
+    
   }
 cout << "Proizv: " << proizv << endl;
 
