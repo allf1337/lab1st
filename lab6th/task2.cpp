@@ -8,80 +8,36 @@
 using namespace std;
 
 
-int main() {
-  int  i, k = 0, s = 0, p = 0;
-  int const n=10;
-  double S[n], proizv=1;
-  cout << "Введите элементы массива: " << endl;
-  for (int i=0; i<n; i++)
-  {
-    cin>>S[i];
-  }
-  for (i=0; i<n; i++) {
-    if (S[i]==0)
+int main()
+{
+    int a[20], n, i, k = 0, s = 0, p=0;
+    cout << "Massiv elements: ";
+    cin >> n;
+    cout <<"Massiv: " << endl;
+    for(i = 0; i < n; i++) 
     {
-      k=1;
-      break;
+        cout << "a[ " << i+1 << " ] = ";
+        cin >> a[i];
     }
-    for (i=n; i<n; i--)
-    if (S[i]==0)
+    for(i=0; i<n; i++)
     {
-      p=i;
+        if(a[i]==0)
+        {
+            k=i;
+            break;
+        }
     }
-    for (i=k; i<p; i++)
+    for (i=n-1; i>=0; i--)
+        if (a[i]==0)
+        {
+            p=i;
+            break;
+        }
+    for (i=k; i<=p; i++)
     {
-      s+=S[i]+s;
-    cout << "Sum: " << s << endl;
+        s=s+a[i];
     }
+    cout << "Summa = " << s << endl;
+
   
-    
 }
-
-}
-
-
-
-
-
-
-
-
-#include <iostream>
-#include <locale.h>
-#define _USE_MATH_DEFINES
-#include <math.h>
-
-
-
-using namespace std;
-
-
-int main() {
-  int  k = 0, s = 0, p = 0;
-  int const n=10;
-  double S[n], proizv=1;
-  cout << "Введите элементы массива: " << endl;
-  for (int i=0; i<n; i++)
-  {
-    cin>>S[i];
-  }
-  for (int i=0; i<n; i++) 
-    if (S[i]==0)
-    {
-      k=1;
-      break;
-    }
-    for (int i=n; i<n; i--)
-    if (S[i]==0)
-    {
-      p=i;
-    }
-    for (int i=k; i<p; i++)
-    {
-      s+=S[i]+s;
-    
-    }
-  cout << "Sum: " << s << endl;
-    
-}
-
