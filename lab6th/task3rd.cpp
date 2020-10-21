@@ -13,31 +13,31 @@ int main()
     int a[20], n, i, k = 0, s = 0, p=0;
     cout << "Massiv elements: ";
     cin >> n;
-    cout <<"Massiv: " << endl;
-    for(i = 0; i < n; i++) 
-    {
-        cout << "a[ " << i+1 << " ] = ";
-        cin >> a[i];
-    }
-    for(i=0; i<n; i++)
-    {
-        if(a[i]==0)
-        {
-            k=i;
-            break;
-        }
-    }
-    for (i=n-1; i>=0; i--)
-        if (a[i]==0)
-        {
-            p=i;
-            break;
-        }
-    for (i=k; i<=p; i++)
-    {
-        s=s+a[i];
-    }
-    cout << "Summa = " << s << endl;
-
-  
+    int *mass = new int[n];       
+ 
+ for (int i = 0; i < n; i++)    
+ {
+         cout<<i+1<<" :";
+         cin>>mass[i];
+ }
+ 
+ for (int i = 0; i < n; i++)  
+ {
+  if (mass[i] < 0)
+  {
+                mass[i] = 0;
+ 
+  }
+   }
+ cout << "Massiv without n<0 " << endl;
+ for (int i = 0; i < n; i++)
+{   
+        
+         cout<<i+1<<" : ";
+         cout<<mass[i]<<endl;
+ }
+ delete[] mass;         
+system("pause");
+        return 0;
 }
+  
