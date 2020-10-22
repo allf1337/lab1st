@@ -8,23 +8,26 @@
 using namespace std;
 
 
-int main() {
-  int const n=10;
-  double S[n], proizv=1;
-  cout << "Введите элементы массива: " << endl;
-  for (int i=0; i<n; i++)
-  {
-    cin>>S[i];
-  }
-  for (int i=0; i<n; i++)
-  {
-    if (i%2==0)
+int main()
+{
+    int a[100], n, i, proizv=1;
+    cout << "Кол-во элементов массива (n<=100): ";
+    cin >> n;
+    cout <<"Массив: " << endl;
+    for(i=0; i < n; i++) 
     {
-      proizv*=S[i];
+        cout << "a[ " << i+1 << " ] = ";
+        cin >> a[i];
+    }
+    for(i=0; i<n; i++)
+    {
+        if(i%2!=0)
+        {
+            proizv*=a[i];
+        }
     }
     
-  }
-cout << "Proizv: " << proizv << endl;
+    cout << "Произведение = " << proizv << endl;
 
+  
 }
-
