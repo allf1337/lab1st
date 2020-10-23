@@ -10,16 +10,16 @@ using namespace std;
 
 int main()
 {
-    int a[20], n, i, k = 0, s = 0, p=0;
-    cout << "Massiv elements: ";
+    int a[100], n, i, k = 0, s = 0, p=0;
+    cout << "Кол-во элементов массива (n<=100): ";
     cin >> n;
     int *mass = new int[n];       
  
  for (int i = 0; i < n; i++)    
- {
-         cout<<i+1<<" :";
-         cin>>mass[i];
- }
+  {
+        cout << "a[ " << i+1 << " ] = ";
+        cin >> mass[i];
+    }
  
  for (int i = 0; i < n; i++)  
  {
@@ -29,7 +29,7 @@ int main()
  
   }
    }
- cout << "Massiv without n<0 " << endl;
+ cout << "Массив без n<0 " << endl;
  for (int i = 0; i < n; i++)
 {   
         
@@ -40,4 +40,3 @@ int main()
 system("pause");
         return 0;
 }
-  
