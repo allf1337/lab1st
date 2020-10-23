@@ -10,10 +10,10 @@ using namespace std;
 
 int main()
 {
-    int a[20], n, i, k = 0, s = 0, p=0;
-    cout << "Massiv elements: ";
+    int a[100], n, i, k = 0, s = 0, p=0;
+    cout << "Кол-во элементов массива (n<=100): ";
     cin >> n;
-    cout <<"Massiv: " << endl;
+    cout <<"Массив: " << endl;
     for(i = 0; i < n; i++) 
     {
         cout << "a[ " << i+1 << " ] = ";
@@ -41,7 +41,7 @@ int main()
       cout << "В массиве нет нулевых элементов";
     }
     else {
-    cout << "Summa = " << s << endl;
+    cout << "Сумма = " << s << endl;
     }
   
 }
