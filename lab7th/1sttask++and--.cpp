@@ -8,7 +8,7 @@ using namespace std;
 
 
 int main() {
- int a[100], n, i;
+ int a[100], n, i,s;
     cout << "Кол-во элементов массива (n<=100): ";
     cin >> n;
     cout <<"Массив: " << endl;
@@ -39,6 +39,13 @@ int main() {
 	
 	cout << "Массив по возрастанию: "<<endl;
   for (int index = 0; index < n; ++index)
+		{   
+         
+         cout << "a[ " << index+1 << " ] = ";
+         cout<<a[index]<<endl;
+ }
+ cout << "Массив по убыванию: "<<endl;
+  for (int index = n-1; index >=0; --index)
 		{   
          
          cout << "a[ " << index+1 << " ] = ";
