@@ -19,7 +19,7 @@ void FillArray (int a[100], const int n, int i )
     }
 }
 
-void SezrchArray (int a[100], const int n, int i )
+void SortArray (int a[100], const int n, int i )
 {
 
 for (int startIndex = 0; startIndex < n - 1; ++startIndex)
@@ -67,7 +67,7 @@ int main() {
  int *a = new int [100];
    
   FillArray (a,n,i);
-	SezrchArray (a,n,i );
+  SortArray (a,n,i );
   PrintArray (a,n,i);
  delete [] a;
 	return 0;
