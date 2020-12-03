@@ -6,19 +6,23 @@
  
 using namespace std;
 
-int main() {
- int n, i,s;
- int *a = new int [100];
-    cout << "Кол-во элементов массива (n<=100): ";
-    cin >> n;
+void FillArray (int a[100], const int n, int i )
+{
+
+//cout << "Кол-во элементов массива (n<=100): ";
+    //cin >> n;
     cout <<"Массив: " << endl;
     for(i = 0; i < n; i++) 
     {
         cout << "a[ " << i+1 << " ] = ";
         cin >> a[i];
     }
+}
 
-	for (int startIndex = 0; startIndex < n - 1; ++startIndex)
+void SezrchArray (int a[100], const int n, int i )
+{
+
+for (int startIndex = 0; startIndex < n - 1; ++startIndex)
 	{
 	
 		int smallestIndex = startIndex;
@@ -35,9 +39,12 @@ int main() {
 		
 		std::swap(a[startIndex], a[smallestIndex]);
 	}
- 
-	
-	cout << "Массив по возрастанию: "<<endl;
+  
+  
+}
+
+void PrintArray (int a[100], const int n, int i) {
+  cout << "Массив по возрастанию: "<<endl;
   for (int index = 0; index < n; ++index)
 		{   
          
@@ -51,6 +58,17 @@ int main() {
          cout << "a[ " << index+1 << " ] = ";
          cout<<a[index]<<endl;
  }
+}
+
+
+int main() {
+ int  i,s;
+ const int n = 5;
+ int *a = new int [100];
+   
+  FillArray (a,n,i);
+	SezrchArray (a,n,i );
+  PrintArray (a,n,i);
  delete [] a;
 	return 0;
 }
