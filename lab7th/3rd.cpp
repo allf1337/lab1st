@@ -29,7 +29,6 @@ int main() {
 
 
 
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -38,9 +37,9 @@ int main()
 {
     srand(time(0));
     int n,i,j;
-    int sum,k=0,min=0;
+    int sum,k=0,min=0,sum1;
     setlocale(LC_ALL, "Russian");
-    cout<<"Vvedite razmer matricy: 0<n<100=";
+    cout<<"Введите размер массива: ";
     cin>>n;
     int Matrix[n][n];
     for(i = 0;i < n; i++)
@@ -59,15 +58,32 @@ int main()
         for (j=0; j<i+1; j++)
             sum += Matrix[j][i-j];
         k++;
-        cout<<"Summa elementov parallelnyh vyshe pobo4noi diagonali:"<<k<<" = "<<sum<<endl;
+        cout<<"Сумма элементов параллельных выше побочной диагонали: "<<k<<" = "<<sum<<endl;
     }
     sum = 0;
     for (i=0; i<n; i++)
     {
             sum += Matrix[i][n-i-1];
     }
-    cout<<"Summa elementov pobo4noi:"<<" = "<<sum<<endl;
+    cout<<"Сумма элементов побочной диагонали: "<<" = "<<sum<<endl;
+    
+    int sum_1=0;
+    
+    for(i=0; i<n; ++i) {
+        for(j=0; j<n; ++j) {
+            if (i==j) {
+                sum_1+=Matrix[i][j];
+            }
+        }
+    }
+    
+     cout<<"Сумма элементов главной диагонали: "<<" = "<<sum_1<<endl;
     cout<<endl;
+
+     
+
+    
+      
     system("pause");
     return 0;
 }
