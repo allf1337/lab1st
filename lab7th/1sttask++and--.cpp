@@ -1,3 +1,4 @@
+  
 #include <iostream>
 #include <locale.h>
 #define _USE_MATH_DEFINES
@@ -18,42 +19,36 @@ int main() {
         cin >> a[i];
     }
 
-	for (int startIndex = 0; startIndex < n - 1; ++startIndex)
+	for (int i = 0; i < n - 1; ++i)
 	{
-	
-		int smallestIndex = startIndex;
- 
-		
-		for (int currentIndex = startIndex + 1; currentIndex < n; ++currentIndex)
+	  int minI = i;
+    for (int Index = i + 1; Index < n; ++Index)
 		{
-			
-			if (a[currentIndex] < a[smallestIndex])
-			
-				smallestIndex = currentIndex;
+		if (a[Index] < a[minI])
+		minI = Index;
 		}
- 
-		
-		std::swap(a[startIndex], a[smallestIndex]);
+    std::swap(a[i], a[minI]);
 	}
  
 	
 	cout << "Массив по возрастанию: "<<endl;
-  for (int index = 0; index < n; ++index)
+  for (int i = 0; i < n; ++i)
 		{   
          
-         cout << "a[ " << index+1 << " ] = ";
-         cout<<a[index]<<endl;
+         cout << "a[ " << i+1 << " ] = ";
+         cout<<a[i]<<endl;
  }
  cout << "Массив по убыванию: "<<endl;
-  for (int index = n-1; index >=0; --index)
+  for (int i = n-1; i >=0; --i)
 		{   
          
-         cout << "a[ " << index+1 << " ] = ";
-         cout<<a[index]<<endl;
+         cout << "a[ " << i+1 << " ] = ";
+         cout<<a[i]<<endl;
  }
  
 	return 0;
 }
+
 
 
 
