@@ -1,58 +1,81 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
+
 using namespace std;
-int main()
+
+void Vvod(int str, int stlb, int** arr)
 {
-    srand(time(0));
-    int n,i,j;
-    int sum,k=0,min=0,sum1;
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите размер массива: ";
-    cin>>n;
-    int Matrix[n][n];
-    for(i = 0;i < n; i++)
+for (int i = 0; i < str; i++) {
+arr[i] = new int[stlb];
+}
+//Ввод элементов
+ for(int i = 0;i < str; i++)
     {
-        for(int j = 0;j < n;j++)
+        for(int j = 0;j < stlb;j++)
         {
-            Matrix[i][j] = rand()%9+1;
-            cout<<Matrix[i][j]<<' ';
+            arr[i][j] = rand()%9+1;
+            cout<<arr[i][j]<<' ';
         }
         cout<<endl;
     }
-    cout<<endl<<endl;
-    for (i=0; i<n-1; i++)
-    {
-        sum = 0;
-        for (j=0; j<i+1; j++)
-            sum += Matrix[j][i-j];
-        k++;
+
+}
+void osnova(int str, int stol, int** arr, int p){
+  
+
+for (int i = 0; i < str; ++i) {
+for (int j = 0; j < stol; ++j) {
+  p *= arr[i][j];
+      
+        int k;
+        int sum = 0;
+        for (j=0; j<i+1; j++) {
+            sum += arr[j][i-j];
+         k++;
+        }
         cout<<"Сумма элементов параллельных выше побочной диагонали: "<<k<<" = "<<sum<<endl;
     }
-    sum = 0;
-    for (i=0; i<n; i++)
+    int sum = 0;
+    for (int i=0; i<str; i++)
     {
-            sum += Matrix[i][n-i-1];
+            sum += arr[i][str-i-1];
     }
     cout<<"Сумма элементов побочной диагонали: "<<" = "<<sum<<endl;
     
     int sum_1=0;
     
-    for(i=0; i<n; ++i) {
-        for(j=0; j<n; ++j) {
+    for(int i=0; i<str; ++i) {
+        for(int j=0; j<str; ++j) {
             if (i==j) {
-                sum_1+=Matrix[i][j];
+                sum_1+=arr[i][j];
             }
         }
     }
     
      cout<<"Сумма элементов главной диагонали: "<<" = "<<sum_1<<endl;
     cout<<endl;
+}
+}
+void del(int** arr, int str) {
 
-     
+for (int i = 0; i < str; i++) {
+delete[] arr[i];
+}
 
-    
-      
-    system("pause");
-    return 0;
+delete[] arr;
+}
+
+int main()
+{
+setlocale(LC_ALL, "Russian");
+int sum = 0, pr = 1;
+int stroka, stolbik;
+cout << "Введите кол-во строк" << endl;
+cin >> stroka;
+cout << "Введите кол-во столбиков" << endl;
+cin >> stolbik;
+int** Array = new int* [stroka];
+Vvod(stroka, stolbik, Array);
+osnova(stroka, stolbik, Array, pr);
+del(Array, stroka);
+return 0;
 }
