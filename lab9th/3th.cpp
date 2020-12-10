@@ -1,5 +1,22 @@
 1)
-  
+#include <iostream>
+#include <cstring>
+ 
+int main()
+{
+  int *del;
+  del=new int;
+  char str[100];
+  strcpy( str, "Эти " );              
+  strcat( str, "строки "          );
+  strcat( str, "объединены "    );
+  strcat( str, "операцией "      );
+  strcat( str, "конкатенации." );
+ 
+  std::cout << str << std::endl;
+  delete del;
+  return 0;
+}
   
   
   
