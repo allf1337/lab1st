@@ -61,3 +61,7 @@ int main()
   delete del;
 	return 0;
 }
+
+
+
+https://logic.pdmi.ras.ru/~smal/aptu/cpp10/2010_09_17.html
