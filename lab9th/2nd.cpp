@@ -19,10 +19,10 @@ bool polindrom(string word)
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-  string str;
+  string word;
 	cout << "Введите слово: ";
-	cin >> str;
-	if(polindrom(str))
+	cin >> word;
+	if(polindrom(word))
 	{
 		cout << "Слово - полиндром.";
 	}
