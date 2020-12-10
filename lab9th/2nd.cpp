@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstring>
-
+#include <clocale>
 using namespace std;
 
-bool check_polindrom(string word)
+bool polindrom(string word)
 {
 	int len = word.length();
 	for(int i = 0; i < len/2; ++i)
@@ -18,16 +18,17 @@ bool check_polindrom(string word)
 
 int main()
 {
-	string str;
-	cout << "Enter the word: ";
+	setlocale(LC_ALL, "Russian");
+  string str;
+	cout << "Введите слово: ";
 	cin >> str;
-	if(check_polindrom(str))
+	if(polindrom(str))
 	{
-		cout << "Word is polindrom.";
+		cout << "Слово - полиндром.";
 	}
 	else
 	{
-		cout << "Word is not polindrom";
+		cout << "Слово - не полидром";
 	}
 	return 0;
 }
