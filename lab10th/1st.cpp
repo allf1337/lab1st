@@ -1,11 +1,3 @@
-/***************************************************************
-*                                                             *
-* Файл     : students.cpp                                     *
-*                                                             *
-* Описание : пример программы для обработки структурных типов *
-*            данных STUDENT (Студент) и GROUP (Группа)        *
-*                                                             *
-***************************************************************/
 
 
 #include <windows.h>
@@ -16,58 +8,49 @@
 using namespace std;
 
 
-
-// ================ описание типов данных ======================
-
-// ------- описание структурного типа данных СТУДЕНТ -----------
 struct BUS {
-	int Number;     // Номер автобуса
-	int Year;          // Год выпуска
-	char Model[15];    // Модель автобуса
-	int NumberStay;   // Мест стоя
-	int NumberSit;            // Месть сидя
+	int Number;    
+	int Year;         
+	char Model[15];    
+	int NumberStay;  
+	int NumberSit;            
 };
 
-// ------- описание структурного типа данных ГРУППА ------------
-// максимальное количество студентов в группе
+
 #define MAX_BUS 30
 struct GROUP {
-	char Name[5];          // Название группы
-	int N;                 // Количество автобусов
-	BUS Bus[MAX_BUS];  // Массив студентов
+	char Name[5];          
+	int N;                 
+	BUS Bus[MAX_BUS];  
 };
 
-// =============== описание прототипов функций =================
 
-// Ввод информации о студенте с клавиатуры
+
 BUS InputBus(void);
 
-// Вывод информации о студенте на экран
 void OutputBus(BUS Bus);
 
-// Ввод информации о группе с клавиатуры
+
 void InputGroup(GROUP *Group);
 
-// Вывод информации о группе на экран
+
 void OutputGroup(GROUP Group);
 
-// =============== основная функция программы ==================
+
 
 int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "Russian");
-	//SetConsoleCP(1251);
-	//SetConsoleOutputCP(1251);
-
+	
 	GROUP Group;
 	InputGroup(&Group);
 	OutputGroup(Group);
 
-	//Sleep(7654);
+	
 	return 0;
 }
 
-// ============ Ввод информации о студенте с клавиатуры ========
+
 BUS InputBus(void)
 {
 	BUS bus;
@@ -84,7 +67,7 @@ BUS InputBus(void)
 	return bus;
 }
 
-// ============ Вывод информации о студенте на экран ===========
+
 void OutputBus(BUS Bus)
 {
 	cout.width(8);
@@ -96,7 +79,7 @@ void OutputBus(BUS Bus)
 		<< Bus.NumberSit << ".\n";
 }
 
-// ============ Ввод информации о группе с клавиатуры ==========
+
 void InputGroup(GROUP *Group)
 {
 	cout << "Введите название группы ===> ";
@@ -111,7 +94,6 @@ void InputGroup(GROUP *Group)
 	}
 }
 
-// ============ Вывод информации о группе на экран =============
 void OutputGroup(GROUP Group)
 {
 	setlocale(LC_ALL, "Russian");
@@ -121,5 +103,14 @@ void OutputGroup(GROUP Group)
 
 
 	
+
+
+	
 }
-// ===================== конец программы ===
+
+
+
+
+
+
+
