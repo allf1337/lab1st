@@ -1,4 +1,3 @@
-
 /***************************************************************
 *                                                             *
 * Файл     : students.cpp                                     *
@@ -71,30 +70,30 @@ int main(int argc, char* argv[])
 // ============ Ввод информации о студенте с клавиатуры ========
 BUS InputBus(void)
 {
-	BUS student;
+	BUS bus;
 	cout << "Введите гос. номер автобуса ====> ";
-	cin >> student.Number;
+	cin >> bus.Number;
 	cout << "Введите модель автобуса ========> " ;
-	cin >> student.Model;
+	cin >> bus.Model;
 	cout << "Введите год выпуска автобуса ===> ";
-	cin >> student.Year;
+	cin >> bus.Year;
 	cout << "Введите кол-во мест стоя ===> ";
-	cin >> student.NumberStay;
+	cin >> bus.NumberStay;
 	cout << "Введите кол-во мест сидя ===> ";
-	cin >> student.NumberSit;
-	return student;
+	cin >> bus.NumberSit;
+	return bus;
 }
 
 // ============ Вывод информации о студенте на экран ===========
-void OutputBus(BUS Student)
+void OutputBus(BUS Bus)
 {
 	cout.width(8);
 	cout.fill('.');
-	cout << Student.Number << " "
-		<< Student.Model << " "
-		<< Student.Year << ". "
-		<< Student.NumberStay << ". "
-		<< Student.NumberSit << ".\n";
+	cout << Bus.Number << " "
+		<< Bus.Model << " "
+		<< Bus.Year << ". "
+		<< Bus.NumberStay << ". "
+		<< Bus.NumberSit << ".\n";
 }
 
 // ============ Ввод информации о группе с клавиатуры ==========
@@ -119,6 +118,8 @@ void OutputGroup(GROUP Group)
 
 	cout << "Список автобусов " << Group.Name << "\n";
 	for (int i = 0; i < Group.N; i++) OutputBus(Group.Bus[i]);
-}
 
+
+	
+}
 // ===================== конец программы ===
