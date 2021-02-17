@@ -16,7 +16,7 @@ int main()
 			sum = (number / 10) + (number % 10);
 			composition = (number / 10) * (number % 10);
 	cout << "Кол-во десятков: " << tens << endl;
-	cout << "Кол-во едениц: " << units << endl;
+	cout << "Кол-во единиц: " << units << endl;
 	cout << "Сумма его цифр: " << sum << endl;
 	cout << "Произведение его цифр: " << composition << endl;
 	return 0;
