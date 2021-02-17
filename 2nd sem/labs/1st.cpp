@@ -11,13 +11,11 @@ int main()
 	int number,tens,units, sum, composition;
 	cout << "Введите двузначное число: ";
 		cin >> number;
-			tens = number / 10;
-			units = number % 10;
-			sum = (number / 10) + (number % 10);
-			composition = (number / 10) * (number % 10);
-	cout << "Кол-во десятков: " << tens << endl;
-	cout << "Кол-во единиц: " << units << endl;
-	cout << "Сумма его цифр: " << sum << endl;
-	cout << "Произведение его цифр: " << composition << endl;
+		if (number > 99 | number < 9)
+			cout << "Данное число не двузначно "<< endl;
+		tens = number / 10;
+		units = number % 10;
+		cout << units << tens << endl;
+	
 	return 0;
 }
