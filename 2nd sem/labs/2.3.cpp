@@ -59,3 +59,58 @@ int main()
 
 
 Prev day :
+
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include <locale.h>
+
+using namespace std;
+
+int main()
+{
+
+	setlocale(LC_ALL, "Russian");
+	int m,n,day;
+	cout << "Введите номер месяца m: ";
+	cin >> m;
+	if (m > 12 ) {
+		cout << "Некорректное число";
+	}
+	cout << "Введите число n: ";
+	cin >> n;
+	if (n > 31) {
+		cout << "Некорректное число";
+	}
+	
+
+
+	if (n - 1 == 0)
+	{
+		m = m - 1;
+		n = 31;
+	}
+
+	
+	else {
+		n = n - 1;
+	}
+	
+	if (m == 0 && n == 31)
+	{
+		cout << "Неопределяемая дата" <<endl;
+		return 0;
+
+	}
+
+	
+		cout << "Pevsl day: ";
+		cout << "Месяц: " << m << " Число: " << n << endl;
+	
+
+	return 0;
+}
+
+
